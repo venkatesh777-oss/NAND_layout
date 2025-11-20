@@ -91,7 +91,8 @@ Propagation delays
 Visual Outputs:
 
 images/
-  nand_ngspice_simulation.png
+
+nand_ngspice_simulation.png
 
 📈 Key Learning Outcomes
 
