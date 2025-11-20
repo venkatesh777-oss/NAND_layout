@@ -115,8 +115,8 @@ NGSpice – Transistor-level simulation
 
 Ubuntu Linux – Development and design environment
 
-AUTHOR
+**AUTHOR
 
 VENKATESH DAMERA
 
-VLSI & EMBEDDED ENTHUSIAST
+VLSI & EMBEDDED ENTHUSIAST**
