@@ -1,0 +1,37 @@
+* SPICE3 file created from nand_gate.ext - technology: scmos
+* 2-input NAND Gate SPICE Simulation
+
+.model pmos pmos level=1
+.model nmos nmos level=1
+
+.option scale=1u
+
+* -------- PMOS Pull-Up Network (Parallel) --------
+M1 out a vdd vdd pmos w=10u l=3u
+M2 out b vdd vdd pmos w=10u l=3u
+
+* -------- NMOS Pull-Down Network (Series) --------
+M3 out a n1 0 nmos w=11u l=3u
+M4 n1  b 0 0 nmos w=11u l=3u
+
+* Lumped Caps
+Cload out 0 5.50f
+CinA  a   0 7.33f
+CinB  b   0 7.88f
+
+* Power supply
+Vdd vdd 0 5
+
+* Inputs
+Va a 0 PULSE(0 5 0n 1n 1n 10n 20n)
+Vb b 0 PULSE(0 5 5n 1n 1n 10n 20n)
+
+.tran 0.1n 100n
+
+.control
+run
+plot a b out  
+.endc
+
+.end
+
