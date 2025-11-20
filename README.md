@@ -39,7 +39,7 @@ This project demonstrates the following steps in a standard VLSI flow:
 
 The NAND gate is implemented using a simple gate level Verilog description defining the logical function:
 
-and(out,a,b);
+nand(out,a,b);
 
  2. Synthesis (Gate-Level)
 
